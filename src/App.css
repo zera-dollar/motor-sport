@@ -1,0 +1,119 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: greenyellow;
+  min-height: 20vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(30px + 2vmin);
+  color: black;
+  
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+.product_img{
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+.getproducts-background {
+  background-image: url("/public/images/pexels-pixabay-315938.jpg"); /* Replace with the actual path to your image */
+  background-size: cover; /* Ensures the image covers the entire container */
+  background-position: center; /* Centers the image */
+  background-repeat: no-repeat; /* Prevents the image from repeating */
+  min-height: 100vh; /* Ensures the background covers the full viewport height */
+  width: 100%; /* Ensures the background spans the full width */
+}
+@keyframes backgroundImageAnimation {
+  0% {
+    background-image: url("images/Mclarencar-5842273_1280.jpg"); /* Replace with the actual path to your image */
+  }
+  33% {
+    background-image: url("images/2024-lamborghini-reveulto-104-67aa3276672fb.avif"); /* Replace with the actual path to your image */
+  }
+  66% {
+    background-image: url("images/pagani-zonda-7401736_1280.jpg"); /* Replace with the actual path to your image */
+  }
+  100% {
+    background-image: url("images/lamborghini-lanzador-concept27-64df95cf7c0ec.avif"); /* Loop back to the first image */
+  }
+}
+
+.animated-background {
+  animation: backgroundImageAnimation 20s infinite; /* 10 seconds for the full animation loop */
+  background-size: cover; /* Ensures the images cover the entire container */
+  background-position: center; /* Centers the images */
+  background-repeat: no-repeat; /* Prevents the images from repeating */
+  min-height: 100vh; /* Ensures the background covers the full viewport height */
+  width: 100%; /* Ensures the background spans the full width */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 2rem;
+  font-weight: bold;
+}
+.car_img:hover {
+  transform: scale(1.1); /* Slightly enlarge the image */
+  transition: transform 0.3s ease-in-out; /* Smooth transition effect */
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.3); /* Add a shadow */
+  opacity: 0.9; /* Slightly reduce opacity */
+  cursor: pointer; /* Change the cursor to indicate interactivity */
+}
+.preloader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: black; /* Light overlay */
+  background-image: url("/public/images/lamborghini-lanzador-concept27-64df95cf7c0ec.avif");
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999; /* Ensure it appears above all other elements */
+}
+
+.spinner {
+  width: 50px;
+  height: 50px;
+  border: 5px solid #ccc; /* Light gray border */
+  border-top: 5px solid #007bff; /* Blue border for the spinner */
+  border-radius: 50%;
+  animation: spin 1s linear infinite; /* Infinite spinning animation */
+}
+
+@keyframes spin {
+  0% {
+      transform: rotate(0deg);
+  }
+  100% {
+      transform: rotate(360deg);
+  }
+}
